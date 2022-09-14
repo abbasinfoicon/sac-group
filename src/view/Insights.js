@@ -12,7 +12,7 @@ const Insights = () => {
           <div className="row d-flex flex-warp justify-content-center">
             <div className="col-md-4">
               <div className="insights_box">
-                <Link to="/insight/1">
+                <Link to="/insight-detail">
                   <h3>Der Weg hin zu einer CO2-armen Mobilität</h3>
                   <div className="img-style">
                     <img src="assets/img/insights1.png" alt="" className="img-fluid" />
@@ -23,7 +23,7 @@ const Insights = () => {
 
             <div className="col-md-4">
               <div className="insights_box">
-                <Link to="/insight/2">
+                <Link to="/insight-detail">
                   <h3>Der Wertschöpfungsbeitrag der EDL-Branche in der global trans-formierten
                     Automobilindustrie</h3>
                   <div className="img-style">

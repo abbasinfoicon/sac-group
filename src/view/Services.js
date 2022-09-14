@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Banner from '../components/lib/Banner'
 import OwlCarousel from 'react-owl-carousel';
 import CircleType from 'circletype'
+import Modal from '../components/templates/Modal';
 
 const options = {
   loop: true,
@@ -345,6 +346,8 @@ const Services = () => {
           </OwlCarousel>
         </div>
       </div>
+
+      <Modal />
     </>
   )
 }
