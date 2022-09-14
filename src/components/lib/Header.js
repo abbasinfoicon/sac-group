@@ -23,6 +23,7 @@ const Header = () => {
 
                                     <div className="flag_lang">
                                         <ul>
+                                            <li className='user'><Link to='/login' ><i className="fa fa-user-circle-o"></i></Link></li>
                                             <li className="active"><Link to='/' ><img src="assets/img/uk-flag.png" alt="UK" /></Link></li>
                                             <li><Link to='/' ><img src="assets/img/gr-flag.png" alt="GR" /></Link></li>
                                         </ul>

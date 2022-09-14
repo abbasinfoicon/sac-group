@@ -10,7 +10,9 @@ import Insights from '../view/Insights'
 import LegalNotice from '../view/LegalNotice'
 import NotFound from '../view/NotFound'
 import Press from '../view/Press'
+import Login from '../view/Login'
 import Services from '../view/Services'
+import Register from '../view/Register'
 
 const index = () => {
     return (
@@ -25,6 +27,8 @@ const index = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal-notice" element={<LegalNotice />} />
             <Route path="/press" element={<Press />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )
