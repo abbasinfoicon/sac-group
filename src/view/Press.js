@@ -7,9 +7,9 @@ const Press = () => {
       <Banner title="Press" banner="banner4.jpg" desc="Author of the picture above: dragonstock / 123RF Lizenzfreie Bilder" />
       <section className="legalNotice">
         <div className="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="title">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="title">
                 <h3>Press</h3>
               </div>
             </div>

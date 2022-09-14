@@ -7,9 +7,9 @@ const LegalNotice = () => {
       <Banner title="Legal Notice" banner="banner1.jpg" desc="Stahl Automotive Consulting GmbH & Co. KG"/>
       <section className="legalNotice">
         <div className="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="title">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="title">
                 <h3>Legal Notice</h3>
               </div>
             </div>
