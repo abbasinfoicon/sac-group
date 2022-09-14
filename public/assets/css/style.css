@@ -8116,6 +8116,7 @@ span.img {
 }
 
 .row_custom .owl-item.center .service-inner .service-back {
+  width: 100%;
 }
 .service-back .content-sec {
   padding: 15px;

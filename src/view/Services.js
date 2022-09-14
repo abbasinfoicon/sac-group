@@ -33,8 +33,8 @@ const Services = () => {
     new CircleType(document.getElementById('demo2')).dir(-1).radius(320);
   }, []);
 
-  const { products, error, isLoading } = useGetAllSersQuery()
-  console.log(products);
+  const { data, error, isLoading } = useGetAllSersQuery()
+  console.log(data);
 
   return (
     <>
@@ -221,15 +221,15 @@ const Services = () => {
               <>Oh no, there was an error</>
             ) : isLoading ? (
               <>Loading...</>
-            ) : products ? (
+            ) : data ? (
               <>
                 {
-                  products.map((item) => (
+                  data.products.map((item) => (
                     <div className="col-custom-1" key={item.id}>
                       <div className="service_flip">
                         <div className="service-inner">
                           <div className="service-front">
-                            <img alt={item.brand} className="img-responsive" src="assets/img/ser1.png" />
+                            <img alt={item.brand} className="img-responsive" src={item.thumbnail} />
                             <h2>{item.title}</h2>
                           </div>
 
