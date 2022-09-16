@@ -33,8 +33,9 @@ const Services = () => {
     new CircleType(document.getElementById('demo2')).dir(-1).radius(320);
   }, []);
 
-  const { data, error, isLoading } = useGetAllSersQuery()
-  console.log(data);
+  const { data, error, isLoading, isSuccess } = useGetAllSersQuery()
+  console.log("data - ", data);
+
 
   return (
     <>
@@ -221,7 +222,7 @@ const Services = () => {
               <>Oh no, there was an error</>
             ) : isLoading ? (
               <>Loading...</>
-            ) : data ? (
+            ) : isSuccess ? (
               <>
                 {
                   data.products.map((item) => (
@@ -240,12 +241,16 @@ const Services = () => {
 
                               <div className="line"></div>
 
-                              <h3>Projektbeispiel</h3>
+                              <h3>{item.brand}</h3>
                               <ul>
-                                <li>Klient: US-Tochter eines globalen OEMs</li>
-                                <li>Validierung der Kundenzielgruppe</li>
-                                <li>Verfeinerung der Modell-Positionierung für einen Pick-up-Truck</li>
-                                <li>Definition der Fahrzeugziele in der frühen Phase</li>
+
+                                {
+                                  item.images.map((img) => (
+                                    <li>{img}</li>
+                                  ))
+                                }
+
+
                               </ul>
                             </div>
                           </div>

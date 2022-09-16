@@ -9112,7 +9112,7 @@ span.img {
 .service-front {
   position: relative;
   min-height: 240px;
-  /* height: 366px; */
+  height: 440px;
 }
 
 .row_custom.secondService .service-front {

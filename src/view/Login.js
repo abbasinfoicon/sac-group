@@ -31,7 +31,7 @@ const Login = () => {
 
                                     <div className="form-group ">
                                         <input type="checkbox" name="remember_me" id="remember_me" className="" />
-                                        <label for="remember_me">Remember Me!</label>
+                                        <label htmlFor="remember_me">Remember Me!</label>
                                     </div>
 
                                     <div className="form-group text-center">
