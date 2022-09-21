@@ -347,7 +347,8 @@ footer {
   }
 }
 .navbarCustom .navbar-default .navbar-nav li a:hover,
-.navbarCustom .navbar-default .navbar-nav li.active a {
+.navbarCustom .navbar-default .navbar-nav li.active a,
+.navbarCustom .navbar-default .navbar-nav li a.active {
   color: #066d8e;
 }
 @media (max-width: 767px) {

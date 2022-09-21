@@ -9,6 +9,10 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    content: {
+        type: String,
+        required: true,
+    },
     img: {
         type: String,
         required: true,
@@ -17,6 +21,11 @@ const postSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
+    },
+    icon: {
+        type: String,
+        required: true,
+        trim: true
     },
     createdAt: {
         type: Date,

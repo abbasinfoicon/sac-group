@@ -47,11 +47,13 @@ class postController {
     // CREATE DATA
     static crtPost = async (req, res) => {
         try {
-            const { title, desc, img, category } = req.body
+            const { title, desc, content, img, icon, category } = req.body
             const data = await postModel({
                 title,
                 desc,
+                content,
                 img,
+                icon,
                 category
             });
             const result = data.save();
