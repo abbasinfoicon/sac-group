@@ -8,6 +8,8 @@ import router from './routes/postApi.js';
 
 const app = express();
 dotENV.config();
+
+// express middleware
 app.use(cors());
 app.use(express.static('public/update'))
 app.use(express.json());

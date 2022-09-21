@@ -1,6 +1,7 @@
 import postModel from "../models/PostModel.js";
 
 class postController {
+    // ALL DATA
     static getAll = async (req, res) => {
         try {
             const result = await postModel.find();
@@ -22,6 +23,7 @@ class postController {
         }
     }
 
+    // SINGLE DATA
     static sglPost = async (req, res) => {
         try {
             const result = await postModel.findById(req.params.id, req.body);
@@ -42,6 +44,7 @@ class postController {
         }
     }
 
+    // CREATE DATA
     static crtPost = async (req, res) => {
         try {
             const { title, desc, img, category } = req.body
@@ -70,6 +73,7 @@ class postController {
         }
     }
 
+    // UPDATE DATA
     static udPost = async (req, res) => {
         try {
             const result = await postModel.findByIdAndUpdate(req.params.id, req.body);
@@ -90,6 +94,7 @@ class postController {
         }
     }
 
+    // DELETE DATA
     static dtPost = async (req, res) => {
         try {
             const result = await postModel.findByIdAndDelete(req.params.id, req.body);

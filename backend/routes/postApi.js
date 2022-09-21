@@ -3,6 +3,7 @@ import postController from "../app/controllers/postController.js";
 
 const router = express.Router();
 
+// CRUD-ROUTER
 router.get('/posts', postController.getAll);
 router.get('/posts/:id', postController.sglPost);
 router.post('/post', postController.crtPost);
