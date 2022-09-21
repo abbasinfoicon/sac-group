@@ -9,7 +9,7 @@
   margin: 0px auto;
   min-width: 10em;
   width: 100%;
-  max-width: 580px;
+  max-width: 551px;
   z-index: 3;
 }
 .menunav ul {
@@ -37,43 +37,43 @@
 }
 /* Cell orientation */
 .one {
-  transform: rotate(27.6923076923deg) skewX(62deg);
+  transform: rotate(0deg) skewX(60deg);
 }
 .two {
-  transform: rotate(55.3846153846deg) skewX(62deg);
+  transform: rotate(30deg) skewX(60deg);
 }
 .three {
-  transform: rotate(83.0769230769deg) skewX(62deg);
+  transform: rotate(60deg) skewX(60deg);
 }
 .four {
-  transform: rotate(110.76923076deg) skewX(62deg);
+  transform: rotate(90deg) skewX(60deg);
 }
 .five {
-  transform: rotate(138.46153846deg) skewX(62deg);
+  transform: rotate(120deg) skewX(60deg);
 }
 .six {
-  transform: rotate(166.15384615deg) skewX(62deg);
+  transform: rotate(150deg) skewX(60deg);
 }
 .seven {
-  transform: rotate(192.84615384deg) skewX(62deg);
+  transform: rotate(180deg) skewX(64deg);
 }
 .eight {
-  transform: rotate(221.53846153deg) skewX(62deg);
+  transform: rotate(205.7142857deg) skewX(64deg);
 }
 .nine {
-  transform: rotate(249.23076923deg) skewX(62deg);
+  transform: rotate(231.4285714deg) skewX(64deg);
 }
 .ten {
-  transform: rotate(276.92307623deg) skewX(62deg);
+  transform: rotate(257.1428571deg) skewX(64deg);
 }
 .eleven {
-  transform: rotate(304.615384615deg) skewX(62deg);
+  transform: rotate(282.8571428deg) skewX(64deg);
 }
 .twelve {
-  transform: rotate(332.3076923deg) skewX(62deg);
+  transform: rotate(308.5714285deg) skewX(64deg);
 }
 .thirteen {
-  transform: rotate(360deg) skewX(62deg);
+  transform: rotate(334deg) skewX(64deg);
 }
 
 .menunav label {
@@ -81,13 +81,41 @@
 }
 .slice label {
   display: block;
-  width: 575px;
-  height: 575px;
-  transform: skew(-62deg) rotate(-77deg);
+  width: 548px;
+  height: 548px;
+  transform: skew(-64deg) rotate(-77deg);
   line-height: 1.9;
   text-align: center;
   background-color: #fff;
   max-width: 600px;
+}
+
+.two label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.three label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.four label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.five label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.six label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.one label {
+    transform: skew(-60deg) rotate(-77deg);
+}
+
+.gray_color.slice label {
+  color: #5291a5;
 }
 .slice label span {
   display: block;
@@ -96,8 +124,12 @@
   color: #ffffff;
   border: 1px solid #00506a;
   transition: all 0.5s ease;
-  font-size: 14px;
   background: #00506a;
+}
+
+.gray_color.slice label:hover {
+  border-color: #68a6ba;
+  background: #68a6ba;
 }
 
 .slice label:hover::after {
@@ -136,8 +168,8 @@
 }
 .circle label {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 15px;
+  line-height: 1.1;
   padding: 15px;
   color: #00506a;
   position: relative;
@@ -191,7 +223,18 @@
   text-align: center;
   background-color: white;
 }
-.menunav:after {/* content: ''; */position: absolute;top: -40px;bottom: -40px;right: -40px;left: -40px;background-image: linear-gradient(180deg, #00506a, #66a6bb);border-radius: 100%;z-index: 1;border: 1px solid #055169;}
+.menunav:after {
+  /* content: ''; */
+  position: absolute;
+  top: -40px;
+  bottom: -40px;
+  right: -40px;
+  left: -40px;
+  background-image: linear-gradient(180deg, #00506a, #66a6bb);
+  border-radius: 100%;
+  z-index: 1;
+  border: 1px solid #055169;
+}
 .visible {
   /* display: block; */
   position: absolute;
@@ -215,7 +258,7 @@
 }
 
 div#menu14 {
-    background-color: #66a6bb;
+  background-color: #66a6bb;
 }
 .hidden {
   display: none;
@@ -242,19 +285,23 @@ div#menu14 {
   -moz-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg);
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: contents;
 }
 .menumain {
   position: relative;
-  width: 580px;
-  height: 580px;
+  width: 551px;
+  height: 551px;
   margin: 15px auto;
-  outline: 40px solid #00506a;
+  outline: 40px solid #000000;
   border-radius: 100%;
 }
 
 @media (min-width: 1200px) {
   .menumain {
-    left: 40px;
+    left: 10px;
   }
 }
 
@@ -267,7 +314,7 @@ div#menu14 {
 }
 
 .menumain h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .menumain i.fa {
@@ -293,10 +340,10 @@ div#menu14 {
   font-size: 18px;
 }
 .up {
-  top: -33px;
+  top: -36px;
 }
 .down {
-  bottom: -30px;
+  bottom: -36px;
 }
 
 .bg_green1 {
@@ -304,21 +351,99 @@ div#menu14 {
   top: -40px;
   left: -40px;
   right: -40px;
-  bottom: -40px;
-  border-radius: 100%;
+  bottom: auto;
   z-index: 1;
   background-image: linear-gradient(180deg, #00506a, transparent);
   border: 1px solid #00506a;
+  height: calc(50% + 40px);
+  background: #055169;
 }
 
 .bg_green2 {
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    right: -40px;
-    bottom: -40px;
-    border-radius: 100%;
-    z-index: 1;
-    background-image: linear-gradient(180deg, transparent, #68a6ba);
-    border: 1px solid #00506a;
+  position: absolute;
+  top: auto;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  /* border-radius: 100%; */
+  z-index: 1;
+  background-image: linear-gradient(180deg, transparent, #68a6ba);
+  border: 1px solid #00506a;
+  background: #68a6ba;
+  height: calc(50% + 40px);
+}
+
+
+
+.slice div {
+  position: relative;
+  left: 5px;
+  top: 10px;
+}
+.one div {
+  transform: rotate(77deg);
+  top: 15px;
+}
+.two div {
+  transform: rotate(46deg);
+}
+.three div {
+  transform: rotate(17deg);
+}
+
+.four div {
+  transform: rotate(-13deg);
+  top: 20px;
+}
+
+.five div {
+  transform: rotate(-44deg);
+  top: 20px;
+}
+
+.six div {
+  transform: rotate(-73deg);
+  left: 14px;
+}
+
+.seven div {
+  transform: rotate(-104deg);
+  top: 15px;
+  left: -8px;
+}
+
+.eight div {
+  transform: rotate(-129deg);
+  left: 0px;
+}
+.nine div {
+  transform: rotate(206deg);
+}
+.ten div {
+  transform: rotate(179deg);
+  left: 0;
+}
+.eleven div {
+  transform: rotate(154deg);
+  top: 15px;
+  left: 0;
+}
+.twelve  div {
+  transform: rotate(128deg);
+  top: 20px;
+}
+.thirteen  div {
+  transform: rotate(103deg);
+  top: 15px;
+}
+
+.main_bg {
+  position: absolute;
+  border-radius: 100%;
+  overflow: hidden;
+  left: -50px;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  border: 2px solid #055169;
 }

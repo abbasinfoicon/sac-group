@@ -252,7 +252,7 @@ const About = () => {
 
         <div className="container-fluid no-padding">
           <div className="row">
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-4">
               <div className="main-heading-title bg-partenaires">
                 <h3>Die 5 Säulen unseres Erfolgs</h3>
               </div>
@@ -260,38 +260,58 @@ const About = () => {
           </div>
         </div>
 
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="card-details">
-                <div className="media">
-                  <div className="media-body mediaWithImg">
-                    <p><span className="img"><img src="assets/img/1.png" alt="" className="img-fluid" /></span>
-                      State-of-the-art Beratungsmethodik
-                    </p>
-                    <p><span className="img"><img src="assets/img/2.png" alt="" className="img-fluid" /></span>
-                      Umfassende Automobilexpertise
-                    </p>
-                    <p><span className="img"><img src="assets/img/3.png" alt="" className="img-fluid" /></span>
-                      Kompetentes und erfahrenes globales Expertennetzwerk
-                    </p>
-                    <p id="team_section"><span className="img"><img src="assets/img/4.png" alt=""
-                      className="img-fluid" /></span>
-                      Ein starkes Team – für die Extrameile beim Klienten
-                    </p>
-                    <p><span className="img"><img src="assets/img/5.png" alt="" className="img-fluid" /></span>
-                      Ein Think-Tank mit dem Motto „Staying ahead of the problem“
-                    </p>
-                  </div>
+        
+        <div className="die-saulem">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="h-toop">
+                            <h3>Die 5 Säulen unseres Erfolgs</h3>
+                        </div>
 
+                        <div className="border-20"></div>
 
-                  <div className="media-right">
-                    <img src="assets/img/img3.png" alt="" className="media-object" />
-                  </div>
+                        <div className="owl-carousel boxinline-saulen">
+                            <div className="erfolgs">
+                                <div className="img-style">
+                                    <img src="assets/img/1.png" alt="" className="img-fluid"/>
+                                </div>
+                                <h3>State-of-the-art Beratungs-methodik</h3>
+                            </div>
+
+                            <div className="erfolgs">
+                                <div className="img-style">
+                                    <img src="assets/img/2.png" alt="" className="img-fluid"/>
+                                </div>
+                                <h3>Umfassende Automobil-expertise</h3>
+                            </div>
+
+                            <div className="erfolgs">
+                                <div className="img-style">
+                                    <img src="assets/img/3.png" alt="" className="img-fluid"/>
+                                </div>
+                                <h3>Kompetentes und erfahrenes globales Experten-netzwerk</h3>
+                            </div>
+
+                            <div className="erfolgs">
+                                <div className="img-style">
+                                    <img src="assets/img/4.png" alt="" className="img-fluid"/>
+                                </div>
+                                <h3>Ein starkes Team – für die Extrameile beim Klienten</h3>
+                            </div>
+
+                            <div className="erfolgs">
+                                <div className="img-style">
+                                    <img src="assets/img/5.png" alt="" className="img-fluid"/>
+                                </div>
+                                <h3>Ein Think-Tank mit dem Motto „Staying ahead of the problem“</h3>
+                            </div>
+                        </div>
+
+                        <div className="border-40"></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <div className="container-fluid no-padding">
