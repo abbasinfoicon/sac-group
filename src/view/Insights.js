@@ -19,11 +19,11 @@ const Insights = () => {
           <div className="row d-flex flex-warp justify-content-center">
 
             {
-              data.products.map((item) => (
+              data.data.map((item) => (
                 <div className="col-md-4" key={item.id}>
                   <div className="insights_box">
                     <Link to="/insight-detail">
-                      <h3>{item.description}</h3>
+                      <h3>{item.title}</h3>
                       <div className="img-style">
                         <img src="assets/img/insights1.png" alt="" className="img-fluid" />
                       </div>

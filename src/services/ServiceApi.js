@@ -3,13 +3,13 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const serviceApi = createApi({
     reducerPath: 'serviceApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://dummyjson.com/'
+        baseUrl: 'http://localhost:5000/api/'
     }),
 // https://jsonplaceholder.typicode.com/posts
     endpoints: (builder) => ({
         getAllSers: builder.query({
             query: () => ({
-                url: 'products',
+                url: 'posts',
                 method: 'GET'
             })
         })

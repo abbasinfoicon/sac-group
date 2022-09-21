@@ -225,33 +225,23 @@ const Services = () => {
             ) : isSuccess ? (
               <>
                 {
-                  data.products.map((item) => (
+                  data.data.map((item) => (
                     <div className="col-custom-1" key={item.id}>
                       <div className="service_flip">
                         <div className="service-inner">
                           <div className="service-front">
-                            <img alt={item.brand} className="img-responsive" src={item.thumbnail} />
+                            <img alt={item.title} className="img-responsive" src={item.img} />
                             <h2>{item.title}</h2>
                           </div>
 
                           <div className="service-back">
                             <div className="content-sec">
                               <h3>{item.title}</h3>
-                              <p>{item.description}</p>
+                              <p>{item.desc}</p>
 
                               <div className="line"></div>
 
-                              <h3>{item.brand}</h3>
-                              <ul>
-
-                                {
-                                  item.images.map((img) => (
-                                    <li>{img}</li>
-                                  ))
-                                }
-
-
-                              </ul>
+                              <p>{item.desc}</p>
                             </div>
                           </div>
                         </div>
