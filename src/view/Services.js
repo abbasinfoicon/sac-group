@@ -271,7 +271,7 @@ const Services = () => {
 
                               <div className="line"></div>
 
-                              <p>{item.desc}</p>
+                              <p>{item.content}</p>
                             </div>
                           </div>
                         </div>
