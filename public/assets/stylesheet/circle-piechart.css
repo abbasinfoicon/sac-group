@@ -36,43 +36,43 @@
   border: 1px solid #00506a;
 }
 /* Cell orientation */
-.one {
+.slice1 {
   transform: rotate(0deg) skewX(60deg);
 }
-.two {
+.slice2 {
   transform: rotate(30deg) skewX(60deg);
 }
-.three {
+.slice3 {
   transform: rotate(60deg) skewX(60deg);
 }
-.four {
+.slice4 {
   transform: rotate(90deg) skewX(60deg);
 }
-.five {
+.slice5 {
   transform: rotate(120deg) skewX(60deg);
 }
-.six {
+.slice6 {
   transform: rotate(150deg) skewX(60deg);
 }
-.seven {
+.slice7 {
   transform: rotate(180deg) skewX(64deg);
 }
-.eight {
+.slice8 {
   transform: rotate(205.7142857deg) skewX(64deg);
 }
-.nine {
+.slice9 {
   transform: rotate(231.4285714deg) skewX(64deg);
 }
-.ten {
+.slice10 {
   transform: rotate(257.1428571deg) skewX(64deg);
 }
-.eleven {
+.slice11 {
   transform: rotate(282.8571428deg) skewX(64deg);
 }
-.twelve {
+.slice12 {
   transform: rotate(308.5714285deg) skewX(64deg);
 }
-.thirteen {
+.slice13 {
   transform: rotate(334deg) skewX(64deg);
 }
 
@@ -90,31 +90,38 @@
   max-width: 600px;
 }
 
-.two label {
-    transform: skew(-60deg) rotate(-77deg);
+.slice1 label {
+  transform: skew(-60deg) rotate(-77deg);
 }
 
-.three label {
-    transform: skew(-60deg) rotate(-77deg);
+.slice2 label {
+  transform: skew(-60deg) rotate(-77deg);
 }
 
-.four label {
-    transform: skew(-60deg) rotate(-77deg);
+.slice3 label {
+  transform: skew(-60deg) rotate(-77deg);
 }
 
-.five label {
-    transform: skew(-60deg) rotate(-77deg);
+.slice4 label {
+  transform: skew(-60deg) rotate(-77deg);
 }
 
-.six label {
-    transform: skew(-60deg) rotate(-77deg);
+.slice5 label {
+  transform: skew(-60deg) rotate(-77deg);
 }
 
-.one label {
-    transform: skew(-60deg) rotate(-77deg);
+.slice6 label {
+  transform: skew(-60deg) rotate(-77deg);
 }
 
-.gray_color.slice label {
+.gray_color.slice label,
+.slice7.slice label,
+.slice8.slice label,
+.slice9.slice label,
+.slice10.slice label,
+.slice11.slice label,
+.slice12.slice label,
+.slice13.slice label  {
   color: #5291a5;
 }
 .slice label span {
@@ -127,7 +134,14 @@
   background: #00506a;
 }
 
-.gray_color.slice label:hover {
+.gray_color.slice label:hover,
+.slice7.slice.slice label:hover,
+.slice8.slice.slice label:hover,
+.slice9.slice.slice label:hover,
+.slice10.slice.slice label:hover,
+.slice11.slice.slice label:hover,
+.slice12.slice.slice label:hover,
+.slice13.slice.slice label:hover {
   border-color: #68a6ba;
   background: #68a6ba;
 }
@@ -373,66 +387,67 @@ div#menu14 {
   height: calc(50% + 40px);
 }
 
-
-
 .slice div {
   position: relative;
   left: 5px;
   top: 10px;
+  width: 90px;
+  margin: 0 auto;
+  word-break: break-all;
 }
-.one div {
+.slice1 div {
   transform: rotate(77deg);
   top: 15px;
 }
-.two div {
+.slice2 div {
   transform: rotate(46deg);
 }
-.three div {
+.slice3 div {
   transform: rotate(17deg);
 }
 
-.four div {
+.slice4 div {
   transform: rotate(-13deg);
   top: 20px;
 }
 
-.five div {
+.slice5 div {
   transform: rotate(-44deg);
   top: 20px;
 }
 
-.six div {
+.slice6 div {
   transform: rotate(-73deg);
   left: 14px;
 }
 
-.seven div {
+.slice7 div {
   transform: rotate(-104deg);
   top: 15px;
   left: -8px;
 }
 
-.eight div {
+.slice8 div {
   transform: rotate(-129deg);
   left: 0px;
 }
-.nine div {
+.slice9 div {
   transform: rotate(206deg);
 }
-.ten div {
+.slice10 div {
   transform: rotate(179deg);
   left: 0;
 }
-.eleven div {
+.slice11 div {
   transform: rotate(154deg);
   top: 15px;
   left: 0;
 }
-.twelve  div {
+.slice12 div {
   transform: rotate(128deg);
   top: 20px;
 }
-.thirteen  div {
+.slice13 div {
   transform: rotate(103deg);
   top: 15px;
 }

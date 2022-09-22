@@ -7939,6 +7939,7 @@ span.img {
   background-repeat: no-repeat;
   padding: 15px;
   background-position: center;
+  border: 1px solid #066d8e;
 }
 
 @media screen and (min-width: 630px) and (max-width: 767px) {
@@ -9057,3 +9058,13 @@ section.carrer {
   z-index: 1;
 }
 /* die-saulem */
+
+.loading {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loading img.img-fluid {
+  width: 75px;
+}
