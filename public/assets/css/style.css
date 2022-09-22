@@ -7090,6 +7090,8 @@ ount-caracteres {
   font-size: 0;
   width: 45px;
   height: 76px;
+  background-color: transparent;
+    border: none;
 }
 
 @media screen and (min-width: 630px) and (max-width: 767px) {
@@ -8382,6 +8384,8 @@ span.img {
   overflow: hidden;
 }
 .insights_box .img-style img {
+  height: 100%;
+  object-fit: cover;
 }
 /* insights_box */
 
@@ -8896,6 +8900,7 @@ area[title]:hover::after {
 .flag_lang ul li {
   box-shadow: 3px 3px 6px #bfc3cf, -3px -3px 6px #fff;
   position: relative;
+  line-height: 1;
 }
 
 .flag_lang ul li.active {
