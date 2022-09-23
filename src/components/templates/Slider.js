@@ -1,5 +1,6 @@
 import React from 'react'
 import OwlCarousel from 'react-owl-carousel';
+import { useGetAllSliderQuery } from '../../services/ServiceApi';
 
 const options = {
     loop: true,
@@ -15,75 +16,42 @@ const options = {
 }
 
 const Slider = () => {
+
+    const { data, error, isLoading, isSuccess } = useGetAllSliderQuery()
+    console.log("data - ", data);
+
     return (
         <div className="banner-slider">
             <div className="main-bg-color ">
-                <OwlCarousel className="owl-theme main_carousel" {...options} id="main_carousel">
-                    <div className="item">
-                        <div className="bg-video-wrap">
-                            <video loop muted autoPlay>
-                                <source src="assets/video/1168150781.mp4" type="video/mp4" />
-                            </video>
-                            <div className="caption-slider">
-                                <h3>SAC – Passion for automotive drives us</h3>
-                                <h2>Client Services</h2>
-                                <p>Ihr Partner in strategischen Transformationsprozessen</p>
-                            </div>
-                        </div>
+                {error ? (
+                    <>Oh no, there was an error</>
+                ) : isLoading ? (
+                    <div className="loading">
+                        <img src="assets/img/loading.gif" alt="" className="img-fluid" />
                     </div>
+                ) : isSuccess ? (
 
-                    <div className="item">
-                        <div className="bg-video-wrap">
-                            <video loop muted autoPlay>
-                                <source src="assets/video/1289360406.mp4" type="video/mp4" />
-                            </video>
-                            <div className="caption-slider">
-                                <h3>SAC – Passion for automotive drives us</h3>
-                                <h2>Join Us</h2>
-                                <p>Ihr Partner in strategischen Transformationsprozessen</p>
-                            </div>
-                        </div>
-                    </div>
+                    <OwlCarousel className="owl-theme main_carousel" {...options} id="main_carousel">
+                        {
+                            data.data.map((item) => (
+                                <div className="item" key={item.id}>
+                                    <div className="bg-video-wrap">
+                                        <video loop muted autoPlay>
+                                            <source src={item.video} type="video/mp4" />
+                                        </video>
 
-                    <div className="item">
-                        <div className="bg-video-wrap">
-                            <video loop muted autoPlay>
-                                <source src="assets/video/815833343.mp4" type="video/mp4" />
-                            </video>
-                            <div className="caption-slider">
-                                <h3>SAC – Passion for automotive drives us</h3>
-                                <h2>Client Services</h2>
-                                <p>Ihr Partner in strategischen Transformationsprozessen</p>
-                            </div>
-                        </div>
-                    </div>
+                                        <div className="caption-slider">
+                                            <h3>{item.title}</h3>
+                                            <h2>{item.subtitle}</h2>
+                                            <p>{item.desc}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </OwlCarousel>
 
-                    <div className="item">
-                        <div className="bg-video-wrap">
-                            <video loop muted autoPlay>
-                                <source src="assets/video/1315929346.mp4" type="video/mp4" />
-                            </video>
-                            <div className="caption-slider">
-                                <h3>SAC – Passion for automotive drives us</h3>
-                                <h2>Join Us</h2>
-                                <p>Ihr Partner in strategischen Transformationsprozessen</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="item">
-                        <div className="bg-video-wrap">
-                            <video loop muted autoPlay>
-                                <source src="assets/video/alphav4.mp4" type="video/mp4" />
-                            </video>
-                            <div className="caption-slider">
-                                <h3>SAC – Passion for automotive drives us</h3>
-                                <h2>Client Services</h2>
-                                <p>Ihr Partner in strategischen Transformationsprozessen</p>
-                            </div>
-                        </div>
-                    </div>
-                </OwlCarousel>
+                ) : null}
             </div>
         </div>
     )

@@ -6998,7 +6998,8 @@ ount-caracteres {
 
 .bg-video-wrap p {
   font-size: 25px;
-  margin-bottom: 15px;
+    width: 50%;
+    margin: 0 auto 15px;
 }
 
 @media (max-width: 768px) {

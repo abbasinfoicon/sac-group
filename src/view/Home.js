@@ -3,9 +3,11 @@ import Slider from '../components/templates/Slider'
 import OwlCarousel from 'react-owl-carousel';
 
 const options = {
-  loop: true,
+  loop: false,
   rewind: true,
-  autoplay: true,
+  autoplay: false,
+  touchDrag: false,
+  mouseDrag: false,
   margin: 30,
   nav: false,
   dots: false,

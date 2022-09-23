@@ -12,8 +12,22 @@ export const serviceApi = createApi({
                 url: 'posts',
                 method: 'GET'
             })
+        }),
+        
+        getAllClient: builder.query({
+            query: (category) => ({
+                url: `posts/${category}`,
+                method: 'GET'
+            })
+        }),
+
+        getAllSlider: builder.query({
+            query: () => ({
+                url: 'sliders',
+                method: 'GET'
+            })
         })
     })
 })
 
-export const { useGetAllSersQuery } = serviceApi;
+export const { useGetAllSersQuery, useGetAllSliderQuery, useGetAllClientQuery } = serviceApi;

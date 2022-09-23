@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 import connectDB from './app/configs/connectDB.js';
-import router from './routes/postApi.js';
+import router from './routes/api.js';
 
 const app = express();
 dotENV.config();
