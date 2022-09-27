@@ -8585,7 +8585,9 @@ span.img {
 }
 
 .client_circle img {
-  width: 100%;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .client_circle p {
@@ -8612,6 +8614,7 @@ span.img {
 .client_circle a {
   display: block;
   position: relative;
+  height: 100%;
 }
 
 .circle_img {
@@ -8711,6 +8714,11 @@ span.img {
   border-radius: 100%;
   overflow: hidden;
   margin: 0 auto;
+  z-index: 8;
+}
+
+.img8:hover{
+  transform: scale(1);
 }
 
 .main_img:before {
