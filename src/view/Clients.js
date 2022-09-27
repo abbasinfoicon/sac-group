@@ -2,7 +2,9 @@ import React from 'react'
 import Banner from '../components/lib/Banner'
 import OwlCarousel from 'react-owl-carousel';
 import Modal from '../components/templates/Modal';
-import { useGetAllClientQuery } from '../services/ServiceApi';
+import { useGetAllSersQuery } from '../services/ServiceApi';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const options = {
   loop: true,
@@ -26,8 +28,7 @@ const options = {
 }
 
 const Clients = () => {
-  const { data, error, isLoading, isSuccess } = useGetAllClientQuery('Services')
-  console.log("data - ", data.species.Services);
+  const { data, error, isLoading, isSuccess } = useGetAllSersQuery();
 
   return (
     <>
@@ -46,62 +47,40 @@ const Clients = () => {
 
           <div className="row d-flex align-items-center justify-content-center">
             <div className="col-md-6 custom_md_6">
-              {/*  <div className="rightSec-img">
-                <img src="assets/img/circle2.png" alt="" className="img-fluid" />
-              </div> */}
 
-              <div className="rightSec-circle">
-                <div className="client_circle">
-                  <div className="img1 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Automobileindustrie.jpg" alt="" className="img-fluid" />
-                      <p>Automobileindustrie</p>
-                    </a>
-                  </div>
-                  <div className="img2 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Telekommunikation.jpg" alt="" className="img-fluid" />
-                      <p>Telekommunikation</p>
-                    </a>
-                  </div>
-                  <div className="img3 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Energiesektor.jpg" alt="" className="img-fluid" />
-                      <p>Energiesektor</p>
-                    </a>
-                  </div>
-                  <div className="img4 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Mobility-Services.jpg" alt="" className="img-fluid" />
-                      <p>Mobility Services</p>
-                    </a>
-                  </div>
-                  <div className="img5 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Finanzsektor.jpg" alt="" className="img-fluid" />
-                      <p>Finanzsektor</p>
-                    </a>
-                  </div>
-                  <div className="img6 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/IT-Hightech.jpg" alt="" className="img-fluid" />
-                      <p>IT & Hightech</p>
-                    </a>
-                  </div>
-                  <div className="img7 circle_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Maschinenbau.jpg" alt="" className="img-fluid" />
-                      <p>Maschinenbau</p>
-                    </a>
-                  </div>
-                  <div className="main_img">
-                    <a href="javascript:;" data-toggle="modal" data-target="#popSelection">
-                      <img src="assets/img/Automobileindustrie2.jpg" alt="" className="img-fluid" />
-                      <p>Automobileindustrie2.0</p>
-                    </a>
+              {error ? (
+                <>Oh no, there was an error</>
+              ) : isLoading ? (
+                <div className="loading">
+                  <img src="assets/img/loading.gif" alt="" className="img-fluid" />
+                </div>
+              ) : isSuccess ? (
+
+                <div className="rightSec-circle">
+                  <div className="client_circle">
+
+                    {
+
+                      data.data.map((item, i, cont = 0) => (
+                        (item.category) === 'Client' ? (
+                          console.log("Count- ", cont),
+
+                          <div className={`img${i} circle_img`} key={i}>
+                            <a href="#" data-toggle="modal" data-target="#popSelection">
+                              <img src={item.img} alt="" className="img-fluid" />
+                              <p>{item.title}</p>
+                            </a>
+                          </div>
+
+                        ) : null
+                      ))
+                    }
+
                   </div>
                 </div>
-              </div>
+
+              ) : null}
+
             </div>
           </div>
         </div>
@@ -129,29 +108,33 @@ const Clients = () => {
 
             <OwlCarousel className="row_custom" id="row_custom" {...options}>
               {
-                data.data.category.map((item) => (
-                  <div className="col-custom-1" key={item.id}>
-                    <div className="service_flip">
-                      <div className="service-inner">
-                        <div className="service-front">
-                          <img alt={item.title} className="img-responsive" src={item.img} />
-                          <h2>{item.title}</h2>
-                        </div>
+                data.data.map((item, i) => (
+                  (item.category) === 'Client' ? (
 
-                        <div className="service-back">
-                          <div className="content-sec">
-                            <h3>{item.title}</h3>
-                            <p>{item.desc}</p>
+                    <div className="col-custom-1" key={i}>
+                      <div className="service_flip">
+                        <div className="service-inner">
+                          <div className="service-front">
+                            <img alt={item.title} className="img-responsive" src={item.img} />
+                            <h2>{item.title}</h2>
+                          </div>
 
-                            <div className="line"></div>
+                          <div className="service-back">
+                            <div className="content-sec">
+                              <h3>{item.title}</h3>
+                              <p>{item.desc}</p>
 
-                            <p>{item.content}</p>
+                              <div className="line"></div>
+
+                              <p>{item.content}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )).reverse()
+
+                  ) : null
+                ))
               }
             </OwlCarousel>
 

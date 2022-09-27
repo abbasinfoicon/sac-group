@@ -34,7 +34,7 @@ const Services = () => {
   }, []);
 
   const { data, error, isLoading, isSuccess } = useGetAllSersQuery()
-  console.log("data - ", data);
+  // console.log("data - ", data);
 
 
   return (
@@ -137,15 +137,17 @@ const Services = () => {
                       ) : isSuccess ? (
                         <>
                           {
-                            data.data.slice(0, 13).map((item, index) => (
-                              <li className={`slice${index + 1} slice`} data-toggle="modal" data-target="#popSelection" key={item.id}>
-                                <label htmlFor={`slice${index + 1}`} className='circle over' id={index + 1}>
-                                  <span>
-                                    <div>{item.title}</div>
-                                    <i className={`fa fa-${item.icon}`}></i>
-                                  </span>
-                                </label>
-                              </li>
+                            data.data.map((item, index) => (
+                              (item.category) == 'Services' ? (
+                                <li className={`slice${index + 1} slice`} data-toggle="modal" data-target="#popSelection" key={item.id}>
+                                  <label htmlFor={`slice${index + 1}`} className='circle over' id={index + 1}>
+                                    <span>
+                                      <div>{item.title}</div>
+                                      <i className={`fa fa-${item.icon}`}></i>
+                                    </span>
+                                  </label>
+                                </li>
+                              ) : null
                             ))
                           }
                         </>
@@ -186,27 +188,29 @@ const Services = () => {
             <OwlCarousel className="row_custom" id="row_custom" {...options}>
               {
                 data.data.map((item) => (
-                  <div className="col-custom-1" key={item.id}>
-                    <div className="service_flip">
-                      <div className="service-inner">
-                        <div className="service-front">
-                          <img alt={item.title} className="img-responsive" src={item.img} />
-                          <h2>{item.title}</h2>
-                        </div>
+                  (item.category) === 'Services' ? (
+                    <div className="col-custom-1" key={item.id}>
+                      <div className="service_flip">
+                        <div className="service-inner">
+                          <div className="service-front">
+                            <img alt={item.title} className="img-responsive" src={item.img} />
+                            <h2>{item.title}</h2>
+                          </div>
 
-                        <div className="service-back">
-                          <div className="content-sec">
-                            <h3>{item.title}</h3>
-                            <p>{item.desc}</p>
+                          <div className="service-back">
+                            <div className="content-sec">
+                              <h3>{item.title}</h3>
+                              <p>{item.desc}</p>
 
-                            <div className="line"></div>
+                              <div className="line"></div>
 
-                            <p>{item.content}</p>
+                              <p>{item.content}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  ) : null
                 ))
               }
             </OwlCarousel>
