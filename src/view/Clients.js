@@ -27,6 +27,7 @@ const options = {
   }
 }
 
+
 const Clients = () => {
   const { data, error, isLoading, isSuccess } = useGetAllSersQuery();
 
@@ -61,11 +62,10 @@ const Clients = () => {
 
                     {
 
-                      data.data.map((item, i, cont = 0) => (
+                      data.data.map((item, i = 0) => (
                         (item.category) === 'Client' ? (
-                          console.log("Count- ", cont),
-
-                          <div className={`img${i} circle_img`} key={i}>
+                          
+                          <div className={`img${i - 12} circle_img`} key={i}>
                             <a href="#" data-toggle="modal" data-target="#popSelection">
                               <img src={item.img} alt="" className="img-fluid" />
                               <p>{item.title}</p>

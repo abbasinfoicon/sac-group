@@ -6998,8 +6998,8 @@ ount-caracteres {
 
 .bg-video-wrap p {
   font-size: 25px;
-    width: 50%;
-    margin: 0 auto 15px;
+  width: 50%;
+  margin: 0 auto 15px;
 }
 
 @media (max-width: 768px) {
@@ -7092,7 +7092,7 @@ ount-caracteres {
   width: 45px;
   height: 76px;
   background-color: transparent;
-    border: none;
+  border: none;
 }
 
 @media screen and (min-width: 630px) and (max-width: 767px) {
@@ -8660,11 +8660,6 @@ span.img {
   z-index: 1;
 }
 
-.img4 {
-  left: 3%;
-  top: 0;
-}
-
 .img7 {
   left: 50%;
   bottom: -35%;
@@ -8679,6 +8674,11 @@ span.img {
 .img5 {
   left: 3%;
   bottom: 0;
+}
+
+.img4 {
+  left: 3%;
+  top: 0;
 }
 
 .img3 {
@@ -8698,7 +8698,13 @@ span.img {
   transform: translate(-50%, -50%);
 }
 
-.main_img {
+.img9,
+.img10 {
+  display: none;
+}
+
+.main_img,
+.img8 {
   position: relative;
   width: 358px;
   height: 358px;
